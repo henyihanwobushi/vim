@@ -1,0 +1,44 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'L9'
+
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'tpope/Vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+Plug 'Shougo/neocomplete.vim'
+Plug 'FuzzyFinder'
+
+call plug#end()
+
+let mapleader = ","
+map <silent> <leader>ss :source ~/.vimrc<cr>
+map <silent> <leader>ee :e ~/.vimrc<cr>
+autocmd! bufwritepost .vimrc source ~/.vimrc
+
+let g:NERDTreeWinPos = "right"
+
+map <leader><leader> :NERDTreeToggle<CR>
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set encoding=utf-8
+set scrolloff=3
+set autoindent
+set showmode
+set showcmd
+set hidden
+set wildmenu
+set wildmode=list:longest
+set visualbell
+set cursorline
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+set laststatus=2
+set number
+set undofile
